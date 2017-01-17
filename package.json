@@ -1,0 +1,27 @@
+{
+  "name": "jibot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "codyzu",
+  "license": "MIT",
+  "xo": {
+    "space": true,
+    "semicolon": false
+  },
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "debug": "^2.6.0",
+    "jira-connector": "https://github.com/floralvikings/jira-connector.git#d8ff9e1f735e7d1969f42ba0a5f38c1beebc0bf9"
+  },
+  "devDependencies": {
+    "ava": "^0.17.0",
+    "xo": "^0.17.1"
+  },
+  "scripts": {
+    "test": "ava -v test/test-*.js",
+    "dev": "ava --watch --source test --source \"*.js\" --source package.json test/test-*.js",
+    "start": "./bin/bot.js"
+  },
+  "description": "jira bot for making queries in simple english",
+  "repository": "https://github.com/codyzu/jibot.git"
+}
