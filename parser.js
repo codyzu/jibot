@@ -35,8 +35,12 @@ function parser(jira) {
   return parse
 
   function parse(phrase) {
+    debug('parsing:', phrase)
+
     for (const p of phrases) {
       for (const r of p.regexes) {
+        // reset the regex in case it has state from the last exec
+        r.lastIndex = 0
         const m = r.exec(phrase)
         if (m) {
           debug('regex:', r)
