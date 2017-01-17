@@ -1,0 +1,4 @@
+node_modules
+
+// this file exports the environment variables for connecting to Jira
+env.sh
